@@ -1,0 +1,27 @@
+server:
+  port: 80
+spring:
+  application:
+    name: reggie
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/reggie?serverTimezone=UTC
+      username: root
+      password: 123456
+  mail:
+    host: smtp.qq.com
+    username: 1169140642@qq.com
+    password: lszphqqrwkmagfah  # 开启 IMAP/SMTP服务 获得的授权码
+    default-encoding: UTF-8
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: assign_id
+reggie:
+  path: D:\img\
